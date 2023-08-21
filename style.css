@@ -1,0 +1,1039 @@
+:root {
+    --light-grey: rgb(243, 243, 243);
+    --main-color: rgb(94, 57, 57);
+    --red: rgb(143, 57, 57);
+    --light-red: rgb(99, 72, 72);
+    --beige: rgb(245, 246, 245);
+    --border-color: rgb(189, 177, 177);
+    --grey: rgb(102, 102, 102);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    background-color: var(--light-grey);
+}
+
+/*general*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*reusable*/
+
+.ancres {
+    scroll-margin-top: 150px;
+}
+
+section {
+    background-color: white;
+    padding: 40px 50px;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+section h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-content {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.colored {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.light-colored {
+    color: var(--light-red);
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+
+/*header*/
+
+header {
+    background-image: url("images/bg-desktop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--main-color);
+    height: 100vh;
+}
+
+/*navbar */
+
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--beige);
+}
+
+nav ul {
+    display: flex;
+    border: solid 1.2px var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(250, 250, 250, 0.25);
+}
+
+nav li {
+    margin: 0 1.2rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+
+/*contact bouton*/
+
+.contact {
+    background-color: var(--main-color);
+    margin: 16px 50px;
+}
+
+.contact:hover {
+    background-color: white;
+    border: solid 1.2px var(--border-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact a {
+    color: white;
+}
+
+.contact:hover a {
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+
+/*animation */
+
+.hover-animation a {
+    position: relative;
+    /*zone d'application du trait*/
+    padding: 0.2em 0;
+    /*distance entre texte et trait*/
+}
+
+.hover-animation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: transform 0.25s ease-out;
+}
+
+.hover-animation:hover a::after {
+    transform: scale(1);
+}
+
+
+
+/*home*/
+
+#home {
+    padding: 50px;
+    color: var(--main-color);
+}
+
+#home h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 80px;
+    font-weight: 400;
+    color: var(--light-red);
+}
+
+#home h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+
+#home h2 span {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.8px;
+}
+
+#home h3 {
+    text-transform: uppercase;
+    color: var(--light-red);
+    font-weight: 800;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.location {
+    display: flex;
+    padding-top: 20px;
+    align-items: baseline;
+}
+
+.location p {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: solid 1.2px var(--border-color);
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.contact-btn:hover {
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover a {
+    color: var(--main-color);
+    transition: 0.3s ease;
+}
+
+/* Presentation */
+
+#presentation .about {
+    margin-right: 80px;
+
+}
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+
+#presentation .hello {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 30px;
+}
+
+
+#presentation h4 {
+    font-size: 2.5rem;
+    margin: 30px 0px 0px 0px;
+}
+
+#presentation h5 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+
+#presentation .content {
+    margin: 40px 0px;
+    line-height: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#presentation .content p:first-child {
+    margin-bottom: 20px;
+}
+
+#presentation .profile-pic {
+    height: 350px;
+    width: auto;
+}
+
+/*simplon banner*/
+
+.simplon-logo {
+    width: 20vw;
+    height: auto;
+    margin-right: 30px;
+}
+
+.simplon-banner {
+    margin-top: 2rem;
+}
+
+#presentation a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.simplon-banner p {
+    margin-bottom: 15px;
+}
+
+
+hr {
+    width: 50vw;
+    margin-top: 2rem;
+}
+
+/*A propos*/
+
+#a-propos h3 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 0.2px var(--main-color);
+}
+
+.container {
+    display: flex;
+    column-gap: 3vw;
+}
+
+#a-propos .container .colonne {
+    width: 50%;
+    overflow: hidden;
+}
+
+/*parcours*/
+
+#a-propos h4 {
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.parcours {
+    list-style: none;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px 0 50px 0;
+}
+
+.parcours li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.parcours li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(94, 57, 57);
+}
+
+#a-propos .date {
+    font-weight: 700;
+    color: black;
+}
+
+.parcours p {
+    color: gray;
+    margin-top: 2px;
+}
+
+/*compétences perso*/
+
+.perso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perso div {
+    text-align: center;
+    min-width: 10rem;
+    min-height: 10rem;
+    align-self: baseline;
+    padding: 10px;
+}
+
+.perso img {
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.perso img:hover {
+    transform: scale(1.2);
+
+}
+
+/*intérêts*/
+
+.interest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+    max-width: 25rem;
+}
+
+.interest img {
+    height: auto;
+    width: 8rem;
+}
+
+
+.img-text {
+    position: relative;
+    width: 8rem;
+    overflow: hidden;
+}
+
+.img-text p {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+
+.img-text img:hover+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interest img {
+    transition: transform 0.3s ease;
+}
+
+.interest img:hover {
+    transform: scale(1.2);
+}
+
+/*competences*/
+
+#competences h3 {
+    color: var(--grey);
+    margin: 50px 0 40px 0;
+    text-align: center;
+}
+
+#competences .column-content {
+    gap: 10px;
+    text-align: center;
+}
+
+/*circular progress*/
+
+.circular-progress {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+}
+
+.html {
+    background: conic-gradient(rgb(255, 145, 0) 0deg, rgb(255, 255, 255) 0deg);
+    /*modifier js end value pour progression*/
+}
+
+.css {
+    background: conic-gradient(rgb(0, 162, 255) 0deg, rgb(255, 255, 255) 0deg);
+}
+
+.js {
+    background: conic-gradient(rgb(255, 255, 0) 0deg, rgb(255, 255, 255) 0deg);
+}
+
+.php {
+    background: conic-gradient(rgb(141, 142, 180) 0deg, rgb(255, 255, 255) 0deg);
+}
+
+.logiciel {
+    width: 10rem;
+}
+
+.progress-center img {
+    width: 50%;
+    position: relative;
+}
+
+
+.link-text {
+    margin-top: 10px;
+    height: 2.5rem;
+}
+
+
+/*liens*/
+
+.link {
+    justify-content: space-around;
+    padding: 10px 80px;
+}
+
+.link ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.link li {
+    margin: 20px;
+    flex: 1;
+}
+
+#liens .link img {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+#liens a:hover img {
+    transform: scale(1.3);
+}
+
+#liens .link-text {
+    opacity: 0;
+}
+
+#liens a:hover .link-text {
+    opacity: 1;
+    color: black;
+    font-weight: 400;
+}
+
+
+
+/*contact */
+
+
+#contact>p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#contact .box-container {
+    display: flex;
+    max-width: 100%;
+    padding: 2vw;
+    gap: 2vw;
+}
+
+#contact .box {
+    flex: 1;
+    padding: 2.5vw;
+    background-color: var(--light-grey);
+    text-align: center;
+    border-radius: 10px;
+}
+
+#contact .box img {
+    margin-right: 10px;
+}
+
+#contact .box:hover a {
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+
+/*footer*/
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 2.8rem;
+    color: var(--grey);
+    font-size: 0.8rem;
+}
+
+label {
+    display: none;
+}
+
+label,
+input {
+    display: none;
+}
+
+.contact-mobile {
+    display: none;
+}
+
+
+
+
+
+
+@media all and (max-width: 991px) {
+
+    header {
+        background-image: url("images/bg-tablet.png");
+    }
+
+    /*navbar*/
+
+    .sticky-navbar {
+        padding: 5px;
+        background-color: var(--main-color);
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--main-color)
+    }
+
+    nav li {
+        margin: 0;
+        color: white;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+        gap: 15px;
+        border: none;
+        background-color: var(--main-color);
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        cursor: pointer;
+        color: white;
+        width: 100%;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+
+    #menu_deroulant:checked+.menu {
+        display: flex;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .contact-mobile {
+        display: inherit;
+    }
+
+    /*bouton contact fixe*/
+
+    .contact-btn {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+    }
+
+    .contact-btn:hover {
+        background-color: var(--main-color);
+    }
+
+    .contact-btn:hover a {
+        color: white;
+    }
+
+    /*home*/
+
+
+    #home {
+        position: relative;
+        padding-bottom: 0;
+        height: 100vh;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        padding-top: 40px;
+    }
+  
+    #home h2 {
+        font-size: 2.5rem;
+    }
+  
+    #home h2 span {
+        font-size: 14px;
+    }
+  
+    h2 {
+        font-size: 18px;
+    }
+  
+    h3 {
+        font-size: 16px;
+    }
+  
+    #home .location p {
+        font-size: 14px;
+    }
+  
+    #presentation h4 {
+        font-size: 2rem;
+    }
+  
+    p {
+        font-size: 14px;
+    }
+  
+    .code {
+        font-size: 0.7rem;
+    }
+
+    #presentation .profile-pic {
+        height: 250px;
+        width: auto;
+    }
+
+    #a-propos .container {
+        flex-direction: column;
+    }
+
+    #a-propos .container .colonne {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    #a-propos .container .colonne div {
+        flex: 1;
+    }
+
+    .perso div {
+        min-width: 6rem;
+        min-height: 6rem;
+        margin-bottom: 30px;
+    }
+
+    .perso img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 2px;
+    }
+
+    .interest img {
+        width: 7rem;
+    }
+
+    .interest {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 0px;
+        row-gap: 0px;
+        max-width: 25rem;
+    }
+
+    .img-text {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: initial;
+        width: 7rem;
+    }
+
+    .img-text p {
+        display: initial;
+        position: initial;
+        text-align: center;
+        transform: none;
+        background-color: initial;
+        color: initial;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .img-text img:hover+p {
+        display: initial;
+    }
+
+    .interest img:hover {
+        transform: none;
+    }
+
+    .circular-progress {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .circular-progress::before {
+        height: 70px;
+        width: 70px;
+    }
+
+
+    #competences h3 {
+        margin: 30px 0;
+    }
+
+    .logiciel {
+        width: 8rem;
+    }
+
+
+    #liens .link {
+        padding: 0px 50px;
+    }
+
+    #liens .link ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #liens .link-text {
+        opacity: 1;
+    }
+
+    #liens .link img {
+        width: 65px;
+        height: 65px;
+    }
+
+    #contact .box-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    header {
+        background-image: url("images/bg-mobile.png");
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    #home h1 {
+        font-size: 2.4rem;
+  
+    }
+  
+    #home h2 {
+        font-size: 1.5rem;
+    }
+    #home h2 span{
+        font-size: 0.8rem;
+    }
+
+    #presentation .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #presentation .hello {
+        font-size: 1.8rem;
+    }
+  
+    #presentation h4 {
+        font-size: 1.6rem;
+    }
+
+    #presentation h5 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    #presentation .about {
+        margin: 0;
+    }
+
+    .simplon-logo {
+        margin: 0;
+        width: 40%;
+        height: auto;
+    }
+
+    #presentation .simplon-banner {
+        text-align: center;
+        gap: 10px;
+    }
+
+
+    #a-propos h4 {
+        font-size: 0.95rem;
+    }  
+
+    .parcours {
+        margin-bottom: 10px;
+    }
+
+    .parcours li {
+        padding-left: 20px;
+    }
+
+    .parcours li::before {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    #competences .wrap {
+        gap: 20px;
+    }
+
+    .logiciel {
+        padding: 5px;
+    }
+
+}
+
+@media all and (max-width: 424px) {
+
+    #contact .box {
+        font-size: 14px;
+    }
+
+}
+
+@media all and (min-width: 1679px) {
+
+    nav ul li {
+        font-size: 1.2rem;
+    }
+
+    #home h1 {
+        font-size: 4.5rem;
+    }
+
+    #home h2 {
+        font-size: 4rem;
+    }
+
+    #home h2 span {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    #home .location p {
+        font-size: 1.8rem;
+    }
+
+    #presentation h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    #presentation .content {
+        line-height: 1.8rem;
+    }
+
+    #presentation h4 {
+        font-size: 2.5rem
+    }
+
+    #presentation h5 {
+        font-size: 2rem
+    }
+
+    #a-propos .parcours h4 {
+        font-size: 1.8rem;
+    }
+
+    #contact .box {
+        font-size: 1.8rem;
+    }
+
+    
+}
