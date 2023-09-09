@@ -207,13 +207,6 @@ nav li {
 }
 
 
-#home h2 span {
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: lowercase;
-    letter-spacing: 0.8px;
-}
-
 #home h3 {
     text-transform: uppercase;
     color: var(--light-red);
@@ -733,10 +726,6 @@ input {
   
     #home h2 {
         font-size: 2.5rem;
-    }
-  
-    #home h2 span {
-        font-size: 14px;
     }
   
     h2 {
