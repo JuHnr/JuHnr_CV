@@ -865,6 +865,10 @@ input {
         height: 65px;
     }
 
+    #liens .column-content ul {
+        padding: 0;
+    }
+
     #contact .box-container {
         display: flex;
         flex-direction: column;
