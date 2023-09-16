@@ -748,31 +748,31 @@ input {
         font-size: 2rem;
         padding-top: 40px;
     }
-  
+
     #home h2 {
         font-size: 2.5rem;
     }
-  
+
     h2 {
         font-size: 18px;
     }
-  
+
     h3 {
         font-size: 16px;
     }
-  
+
     #home .location p {
         font-size: 14px;
     }
-  
+
     #presentation h4 {
         font-size: 2rem;
     }
-  
+
     p {
         font-size: 14px;
     }
-  
+
     .code {
         font-size: 0.7rem;
     }
@@ -867,6 +867,10 @@ input {
         margin: 30px 0;
     }
 
+    #competences li {
+        font-size: 0.8em;
+    }
+
     .logiciel {
         width: 8rem;
     }
@@ -897,7 +901,15 @@ input {
     #projets .flex {
         flex-direction: column;
     }
-    
+
+    #projets li {
+        margin: 8px;
+    }
+
+    #projets ul {
+        padding: 0;
+    }
+
 
     #contact .box-container {
         display: flex;
@@ -919,13 +931,14 @@ input {
 
     #home h1 {
         font-size: 2.4rem;
-  
+
     }
-  
+
     #home h2 {
         font-size: 1.5rem;
     }
-    #home h2 span{
+
+    #home h2 span {
         font-size: 0.8rem;
     }
 
@@ -938,7 +951,7 @@ input {
     #presentation .hello {
         font-size: 1.8rem;
     }
-  
+
     #presentation h4 {
         font-size: 1.6rem;
     }
@@ -966,7 +979,7 @@ input {
 
     #a-propos h4 {
         font-size: 0.95rem;
-    }  
+    }
 
     .parcours {
         margin-bottom: 10px;
@@ -988,6 +1001,11 @@ input {
 
     .logiciel {
         padding: 5px;
+    }
+
+    #projets li img {
+        width: 200px;
+        height: auto;
     }
 
 }
@@ -1058,5 +1076,5 @@ input {
         font-size: 1.8rem;
     }
 
-    
+
 }
