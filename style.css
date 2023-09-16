@@ -571,6 +571,30 @@ hr {
     font-weight: 400;
 }
 
+/*projets*/
+
+#projets .repo-img {
+    padding-right: 10px;
+}
+
+#projets p {
+    text-align: center;
+}
+
+#projets li {
+    margin: 20px;
+}
+
+#projets li img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#projets a:hover img {
+    transform: scale(1.05);
+}
+
 
 
 /*contact */
@@ -593,6 +617,7 @@ hr {
     padding: 2.5vw;
     background-color: var(--light-grey);
     text-align: center;
+    font-size: 0.85em;
     border-radius: 10px;
 }
 
@@ -868,6 +893,11 @@ input {
     #liens .column-content ul {
         padding: 0;
     }
+
+    #projets .flex {
+        flex-direction: column;
+    }
+    
 
     #contact .box-container {
         display: flex;
