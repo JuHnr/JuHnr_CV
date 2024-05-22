@@ -84,6 +84,9 @@ section h2 {
     flex-wrap: wrap;
 }
 
+.width-percent {
+    width: 70%;
+}
 
 
 /*header*/
@@ -496,23 +499,6 @@ hr {
     background-color: rgb(238, 238, 238);
 }
 
-.html {
-    background: conic-gradient(rgb(255, 145, 0) 0deg, rgb(255, 255, 255) 0deg);
-    /*modifier js end value pour progression*/
-}
-
-.css {
-    background: conic-gradient(rgb(0, 162, 255) 0deg, rgb(255, 255, 255) 0deg);
-}
-
-.js {
-    background: conic-gradient(rgb(255, 255, 0) 0deg, rgb(255, 255, 255) 0deg);
-}
-
-.php {
-    background: conic-gradient(rgb(141, 142, 180) 0deg, rgb(255, 255, 255) 0deg);
-}
-
 .logiciel {
     width: 10rem;
 }
@@ -921,6 +907,10 @@ input {
 
 @media all and (max-width: 767px) {
 
+    .width-percent {
+            width: 90%;
+    }
+
     header {
         background-image: url("images/bg-mobile.png");
     }
@@ -1011,6 +1001,10 @@ input {
 }
 
 @media all and (max-width: 424px) {
+
+    .width-percent {
+            width: 100%;
+    }
 
     #contact .box {
         font-size: 14px;

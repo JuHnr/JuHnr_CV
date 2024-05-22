@@ -50,10 +50,8 @@ function startAnimationWhenVisible(selector, endValue, color, speed) {
     }, 250);
 }
 
-startAnimationWhenVisible(".html", 90, "rgb(255, 145, 0)", 25);
-startAnimationWhenVisible(".css", 70, "rgb(0, 162, 255)", 40);
-startAnimationWhenVisible(".js", 30, "rgb(255, 255, 0)", 60);
-startAnimationWhenVisible(".php", 20, "rgb(141, 142, 180)", 60);
+// Exemple si je veux ajouter la barre de progression : startAnimationWhenVisible(".html", 90, "rgb(255, 145, 0)", 25);
+
 
 
 
