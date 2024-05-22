@@ -908,7 +908,7 @@ input {
 @media all and (max-width: 767px) {
 
     .width-percent {
-            width: 90%;
+        width: 90%;
     }
 
     header {
@@ -1003,7 +1003,7 @@ input {
 @media all and (max-width: 424px) {
 
     .width-percent {
-            width: 100%;
+        width: 100%;
     }
 
     #contact .box {
@@ -1021,6 +1021,10 @@ input {
     .location img {
         width: 15px;
         height: auto;
+    }
+
+    #liens .link {
+        padding: 0;
     }
 
 }
